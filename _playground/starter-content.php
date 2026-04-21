@@ -1,18 +1,18 @@
 <?php
 /**
- * Theme Repo Template Starter Content
+ * Everything Starter Content
  *
  * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
  *
- * @package ThemeRepoTemplate
+ * @package Everything
  */
 
-namespace ThemeRepoTemplate\StarterContent;
+namespace Everything\StarterContent;
 
 /**
  * Returns the array of starter content for the theme.
  *
- * Passes it through the `theme_repo_template_starter_content` filter before returning.
+ * Passes it through the `everything_starter_content` filter before returning.
  *
  * @return array A filtered array of args for the starter_content.
  */
@@ -23,7 +23,7 @@ function get_starter_content() {
 		'posts'       => array(
 			'front' => array(
 				'post_type'    => 'page',
-				'post_title'   => esc_html_x( 'Front Page', 'Theme starter content', 'theme-repo-template' ),
+				'post_title'   => esc_html_x( 'Front Page', 'Theme starter content', 'everything' ),
 				'post_content' => '<!-- wp:heading -->
 <h2 class="wp-block-heading">I am a heading!</h2>
 <!-- /wp:heading -->
@@ -50,7 +50,7 @@ function get_starter_content() {
 
 		'attachments' => array(
 			'wapuu' => array(
-				'post_title' => esc_html_x( 'Wapuu', 'Theme starter content', 'theme-repo-template' ),
+				'post_title' => esc_html_x( 'Wapuu', 'Theme starter content', 'everything' ),
 				'file'       => '_playground/wapuu.png',
 			),
 		),
@@ -61,15 +61,15 @@ function get_starter_content() {
 			'page_on_front'   => '{{front}}',
 			'page_for_posts'  => '{{blog}}',
 			'site_icon'       => '{{wapuu}}',
-			'blogname'        => esc_html_x( 'Theme Repo Template', 'Theme starter content', 'theme-repo-template' ),
-			'blogdescription' => esc_html_x( 'Another fine WordPress Block Theme', 'Theme starter content', 'theme-repo-template' ),
+			'blogname'        => esc_html_x( 'Everything', 'Theme starter content', 'everything' ),
+			'blogdescription' => esc_html_x( 'Another fine WordPress Block Theme', 'Theme starter content', 'everything' ),
 		),
 
 		// Set up nav menus for each of the two areas registered in the theme.
 		'nav_menus'   => array(
 			// Assign a menu to the "primary" location.
 			'primary' => array(
-				'name'  => esc_html_x( 'Primary menu', 'Theme starter content', 'theme-repo-template' ),
+				'name'  => esc_html_x( 'Primary menu', 'Theme starter content', 'everything' ),
 				'items' => array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',
@@ -80,14 +80,14 @@ function get_starter_content() {
 
 			// Assign a menu to the "footer" location.
 			'footer'  => array(
-				'name'  => esc_html__( 'Footer menu', 'theme-repo-template' ),
+				'name'  => esc_html__( 'Footer menu', 'everything' ),
 				'items' => array(
 					'link_home',
 					'link_news',
 					'link_email',
 					'link_github' => array(
-						'title' => esc_html_x( 'Theme Repo Template', 'Theme starter content', 'theme-repo-template' ),
-						'url'   => 'https://github.com/georgestephanis/theme-repo-template/',
+						'title' => esc_html_x( 'Everything', 'Theme starter content', 'everything' ),
+						'url'   => 'https://github.com/georgestephanis/everything/',
 					),
 				),
 			),
@@ -99,5 +99,5 @@ function get_starter_content() {
 	 *
 	 * @param array $starter_content Array of starter content.
 	 */
-	return apply_filters( 'theme_repo_template_starter_content', $starter_content );
+	return apply_filters( 'everything_starter_content', $starter_content );
 }
